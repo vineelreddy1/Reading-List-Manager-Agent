@@ -111,8 +111,7 @@ with gr.Blocks(title="Reading List Manager Agent") as demo:
                 headers=["Title", "Category", "Status", "Added Date"],
                 value=format_books_table(),
                 interactive=False,
-                wrap=True,
-                height=220
+                wrap=True
             )
 
             gr.Markdown("### 🔍 Agent Execution Trace")
