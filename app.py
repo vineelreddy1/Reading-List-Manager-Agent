@@ -74,7 +74,7 @@ body { background-color: #0f172a; font-family: 'Inter', sans-serif; color: #f8fa
 .btn-secondary { background-color: #1e293b !important; color: #e2e8f0 !important; border: 1px solid #334155 !important; }
 """
 
-with gr.Blocks(title="Reading List Manager Agent", css=custom_css) as demo:
+with gr.Blocks(title="Reading List Manager Agent") as demo:
     gr.HTML("""
     <div class="header-box">
         <h1>📚 Reading List Manager Agent</h1>
@@ -86,9 +86,7 @@ with gr.Blocks(title="Reading List Manager Agent", css=custom_css) as demo:
         with gr.Column(scale=6):
             chatbot = gr.Chatbot(
                 label="Conversation",
-                type="messages",
-                height=380,
-                bubble_full_width=False
+                height=380
             )
             with gr.Row():
                 user_msg = gr.Textbox(
@@ -147,4 +145,4 @@ with gr.Blocks(title="Reading List Manager Agent", css=custom_css) as demo:
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="127.0.0.1", server_port=7860, share=False)
+    demo.launch(server_name="127.0.0.1", server_port=7860, share=False, css=custom_css)
